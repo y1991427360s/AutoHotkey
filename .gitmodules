@@ -1,0 +1,3 @@
+[submodule "projects/excel-ahk-command-panel"]
+	path = projects/excel-ahk-command-panel
+	url = https://github.com/y1991427360s/excel-ahk-command-panel.git

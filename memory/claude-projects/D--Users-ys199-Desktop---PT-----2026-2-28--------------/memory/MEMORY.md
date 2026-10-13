@@ -1,0 +1,3 @@
+- [讲解型 HTML 默认用亮色卡片+SVG 风格](feedback_explainer_html_style.md) — 教学/可视化 HTML 默认走亮色卡片 + 内联 SVG + 故障态切换按钮，不要用深色
+- [用户终端环境：Windows + WezTerm](user_platform_windows_wezterm.md) — 永远不用 Mac，只考虑 Windows + WezTerm + Git Bash
+- [PowerShell 中文乱码修复](powershell_utf8_output_fix.md) — 调 PS 时前缀 [Console]::OutputEncoding=UTF8

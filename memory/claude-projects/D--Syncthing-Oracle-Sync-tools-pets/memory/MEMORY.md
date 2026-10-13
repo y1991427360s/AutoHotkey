@@ -1,0 +1,1 @@
+- [Running Windows exe from git-bash](bash-run-windows-exe.md) — powershell direct-exec is Permission denied; use `MSYS_NO_PATHCONV=1 cmd.exe /c "powershell ..."`

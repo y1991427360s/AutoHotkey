@@ -1,0 +1,17 @@
+# 本地智能体临时状态
+.agents/
+
+# 运行日志、临时文件和凭据
+*.log
+*.tmp
+*.pyc
+__pycache__/
+.env
+.env.*
+!.env.example
+auth.json
+*.key
+*.pem
+
+# 含历史服务密码的本机记忆，仅保留在本地
+memory/claude-projects/D--Syncthing-Oracle-Sync----/memory/project_sen3_newapi_compose.md

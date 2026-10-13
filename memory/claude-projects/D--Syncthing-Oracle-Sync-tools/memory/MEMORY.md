@@ -1,0 +1,1 @@
+- [WSH + powershell -WindowStyle Hidden 被拦](env_wsh_hidden_blocked.md) — 本机 VBS s.Run 启 powershell 不能带 `-WindowStyle Hidden`，会 0x80070312

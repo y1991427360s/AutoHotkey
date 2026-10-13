@@ -1,0 +1,46 @@
+#Requires AutoHotkey v2.0
+
+CADViewer := "C:\ProgramData\Microsoft\Windows\Start Menu\Programs\CAD快速看图\CAD快速看图.lnk"
+CopyQExe  := "D:\CopyQ\copyq.exe"
+
+#HotIf WinActive("ahk_class CabinetWClass") or WinActive("ahk_class WorkerW") or WinActive("ahk_class Progman")
+$Space::
+{
+    global CADViewer
+    path := Explorer_GetSelected()
+    if (path != "" && StrLower(SubStr(path, -3)) = "dwg") {
+        Run('"' CADViewer '" "' path '"')
+    } else {
+        Send("{Space}")
+    }
+}
+#HotIf
+
+; Get the foreground Explorer/desktop selection without polluting CopyQ.
+; Win11 22H2+ has a Shell.Application stale-tab bug where FocusedItem /
+; SelectedItems can return an item from a different tab, so Ctrl+C
+; (which always targets the active tab) is the only reliable source.
+; We bracket the copy with `copyq disable`/`enable` so the transient
+; clipboard write doesn't land in CopyQ history.
+Explorer_GetSelected() {
+    global CopyQExe
+    hasCopyQ := FileExist(CopyQExe) && ProcessExist("copyq.exe")
+    if hasCopyQ
+        RunWait('"' CopyQExe '" disable',, "Hide")
+    saved := ClipboardAll()
+    A_Clipboard := ""
+    Send("^c")
+    result := ""
+    if ClipWait(0.4, 1) {
+        for line in StrSplit(A_Clipboard, "`n", "`r") {
+            if (line != "" && FileExist(line)) {
+                result := line
+                break
+            }
+        }
+    }
+    A_Clipboard := saved
+    if hasCopyQ
+        RunWait('"' CopyQExe '" enable',, "Hide")
+    return result
+}

@@ -1,0 +1,4 @@
+- [AutoLISP / CAD 文件必须用 GBK + CRLF](feedback_lsp_encoding.md) — 本项目 .lsp/.dcl 等必须 ANSI/GBK + CRLF，禁止 UTF-8
+- [禁止用 Edit/Write 直接改 GBK 文件](feedback_lsp_edit_method.md) — Edit/Write 按 UTF-8 读写会把 GBK 文件的中文批量替换成 \xef\xbf\xbd
+- [ZWCAD 2026 LISP 性能调优要点](feedback_zwcad_lisp_perf.md) — 优先 CAD 空间索引、选择集批量命令和统一重绘，避免大列表 lambda 排序及逐对象命令刷新
+- [Windows 上用 python 而不是 python3](feedback_python_command.md) — python3 会触发 MS Store 占位符，用户 Store 连不上网，统一用 python

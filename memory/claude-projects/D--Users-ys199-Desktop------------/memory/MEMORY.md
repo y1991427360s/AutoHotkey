@@ -1,0 +1,2 @@
+- [Git Bash 中文/UTF-8 一劳永逸配置](reference_gitbash_utf8_fix.md) — 修复中文路径/git/python 乱码；关键：Claude Bash 工具是非交互非登录 shell，只认 Windows 用户环境变量
+- [SpeedMonitor GPU 改用 NVML + 沙漏狂闪排查](project_speedmonitor_gpu_nvml.md) — 代码读 NVIDIA GPU 用 nvml.dll P/Invoke，别 spawn nvidia-smi、别用 GPU Engine 性能计数器；附沙漏光标狂闪的进程 churn 排查法

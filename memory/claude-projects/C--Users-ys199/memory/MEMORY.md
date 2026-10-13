@@ -1,0 +1,13 @@
+- [User profile](user_profile.md) — CAD/工程相关 Windows 用户，常用 AutoCAD/ZWCAD/CAD快速看图
+- [User research](user_research.md) — 研究生，猪饲料碳减排方向（低蛋白日粮/LCA/粪污），向 AI/ML 靠拢
+- [AutoHotkey setup](autohotkey_setup.md) — AHK v2 已装；脚本目录在 D:\Users\ys199\Documents\AutoHotkey
+- [Windows profile paths](windows_profile_paths.md) — Documents 等用户目录已迁移到 D:\Users\ys199\
+- [Sync Claude↔Codex global memory](sync_claude_codex.md) — CLAUDE.md / AGENTS.md / Syncthing 备份三处必须保持一致
+- [Codex Apps 装不上先查订阅](codex_apps_subscription.md) — curated 插件（Gmail/GitHub 等）要 ChatGPT Plus 活跃；先解码 auth.json 的 id_token 看到期日
+- [DWG 空格预览 AHK 脚本](dwg_peek_ahk.md) — Win11 多 tab Explorer 让 Shell COM 失效，改走 Ctrl+C；且 CopyQ 在 D:\CopyQ\，需 disable/enable 包住避免污染历史
+- [agy GOGC=off 内存泄漏](agy_gogc_leak.md) — agy.cmd 设 GOGC=off 绕开启动崩溃，代价是 Go GC 关闭、内存只增不减，已两次撑爆 commit limit
+- [Codex node_repl 路径失效](codex_node_repl_path.md) — Codex 更新轮换 bin\<hash>\ 目录，config.toml 的 node_repl 块指向旧哈希→os error 3，重指向最新哈希二进制即可
+- [PowerShell .ps1 GBK 编码坑](powershell_ps1_gbk_encoding.md) — powershell.exe 5.1 按 GBK 读 .ps1，UTF-8 中文注释→解析报错；写纯 ASCII 或加 BOM
+- [开机自启动延迟](startup_delay_fix.md) — 启动文件夹默认延迟 ~10s 且串行；注册表 Serialize\StartupDelayInMSec=0 关掉
+- [codex-plusplus 已卸载](codex_plusplus_uninstalled.md) — "codex++" 指 b-nnett/codex-plusplus 桌面应用 tweak 注入器，2026-07-25 彻底卸载，正版 Codex 未动
+- [Win 超长路径删除](win_long_path_delete.md) — PS 5.1 Remove-Item 栽 260 限制；用 Git Bash rm -rf 删 Electron/node_modules 目录
