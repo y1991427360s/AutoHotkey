@@ -2,7 +2,7 @@
 
 本目录集中归档本机 AutoHotkey 脚本、现役 Excel/WPS 命令面板、启动项副本，以及 AI 工具的全局规则和 Claude 项目记忆。
 
-GitHub 私有归档仓库：`https://github.com/y1991427360s/AutoHotkey`。Excel/WPS 面板保留独立仓库，通过子模块关联。下载完整归档请使用 `git clone --recurse-submodules https://github.com/y1991427360s/AutoHotkey.git`；已有克隆可执行 `git submodule update --init --recursive`。
+GitHub 公开归档仓库：`https://github.com/y1991427360s/AutoHotkey`。Excel/WPS 面板保留独立仓库，通过子模块关联。下载完整归档请使用 `git clone --recurse-submodules https://github.com/y1991427360s/AutoHotkey.git`；已有克隆可执行 `git submodule update --init --recursive`。
 
 ## 目录
 
